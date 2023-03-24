@@ -67,3 +67,7 @@ def updatetrends():
                 row = {"location_name":location_name,"trend_name":trend_name,"trend_url":trend_url,"tweet_volume":tweet_volume,"time":time}
                 df = df.append(row,ignore_index=True)
         worksheet.append_rows(df.values.tolist())
+    return {Status:updated}
+
+if '__name__'== '__main__':
+    app.run()
